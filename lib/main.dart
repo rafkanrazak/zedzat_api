@@ -67,15 +67,21 @@ class _homepageState extends State<homepage> {
             ),
             Container(
               child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(25),
-                  child: Image.asset(
-                    'assets/images/k.jpg',
-                    height: 200,
+                  child: CarouselSlider(items: [
+                Container(
+                  margin: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                      image: NetworkImage(
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkETV03IEJptt4tUiOMSZZCua0MRf5wzIMjg&usqp=CAU"),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
+              ], options: CarouselOptions())),
             ),
+
             Container(
               child: Row(
                 children: [
